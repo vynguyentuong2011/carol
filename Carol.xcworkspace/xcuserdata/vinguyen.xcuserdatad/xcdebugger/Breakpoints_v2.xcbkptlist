@@ -8,15 +8,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "BDEFE056-C721-4F45-9C04-756E15DCDBA0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Carol/ViewControllers/Onboarding/OnboardingPageViewController.swift"
             startingColumnNumber = "90"
             endingColumnNumber = "90"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "pageViewController(_:viewControllerAfter:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "pageViewController(_:viewControllerBefore:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
