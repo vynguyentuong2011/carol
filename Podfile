@@ -19,6 +19,12 @@ def parse
   pod 'ObjectMapper'
 end
 
+def layout
+  pod 'IQKeyboardManagerSwift'
+  pod 'CHIPageControl', '~> 0.1.3'
+  pod 'CHIPageControl/Aji'
+end
+
 def apiTools
   pod 'Action'
 end
@@ -28,6 +34,7 @@ target 'Carol' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   rx
+  layout
   generation
   parse
   apiTools
