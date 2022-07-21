@@ -139,6 +139,30 @@
                                 <color key="textColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="IPz-hP-F5V">
+                                <rect key="frame" x="30" y="777" width="354" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gix-Jr-2Ae">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="mJZ-cK-aoW"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph7-Gy-Z5r">
+                                        <rect key="frame" x="180" y="0.0" width="174" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="0M9-XO-OWj"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fCl-TQ-THZ"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xR9-4j-Rkg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -147,23 +171,29 @@
                             <constraint firstItem="6Dn-DV-efz" firstAttribute="leading" secondItem="xR9-4j-Rkg" secondAttribute="leading" constant="80" id="Cds-dZ-VTH"/>
                             <constraint firstItem="81k-mc-zh6" firstAttribute="centerX" secondItem="FOt-Mu-qJp" secondAttribute="centerX" id="N4K-zf-Sp2"/>
                             <constraint firstItem="81k-mc-zh6" firstAttribute="leading" secondItem="xR9-4j-Rkg" secondAttribute="leading" constant="79" id="P1b-j8-FtN"/>
+                            <constraint firstItem="xR9-4j-Rkg" firstAttribute="bottom" secondItem="IPz-hP-F5V" secondAttribute="bottom" constant="35" id="Pvp-j3-Ox0"/>
                             <constraint firstItem="0QX-Lw-6Yd" firstAttribute="top" secondItem="xR9-4j-Rkg" secondAttribute="top" constant="112" id="Ty3-EW-swt"/>
+                            <constraint firstItem="xR9-4j-Rkg" firstAttribute="bottom" secondItem="IPz-hP-F5V" secondAttribute="bottom" constant="35" id="X6D-Dz-arr"/>
                             <constraint firstItem="xR9-4j-Rkg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6Dn-DV-efz" secondAttribute="trailing" constant="80" id="hXa-WO-Gg3"/>
                             <constraint firstItem="xR9-4j-Rkg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="81k-mc-zh6" secondAttribute="trailing" constant="79" id="hri-jn-lfK"/>
                             <constraint firstItem="6Dn-DV-efz" firstAttribute="centerX" secondItem="FOt-Mu-qJp" secondAttribute="centerX" id="i4H-xq-5dt"/>
+                            <constraint firstItem="IPz-hP-F5V" firstAttribute="leading" secondItem="xR9-4j-Rkg" secondAttribute="leading" constant="30" id="j8b-q8-hNW"/>
+                            <constraint firstItem="xR9-4j-Rkg" firstAttribute="trailing" secondItem="IPz-hP-F5V" secondAttribute="trailing" constant="30" id="pOd-dt-Xiz"/>
                             <constraint firstItem="81k-mc-zh6" firstAttribute="top" secondItem="0QX-Lw-6Yd" secondAttribute="bottom" constant="34" id="rdS-Jp-46z"/>
                             <constraint firstItem="6Dn-DV-efz" firstAttribute="top" secondItem="81k-mc-zh6" secondAttribute="bottom" constant="20" id="uGt-cJ-Khm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="6Dn-DV-efz" id="KQt-XC-WZT"/>
+                        <outlet property="loginButton" destination="Ph7-Gy-Z5r" id="rHj-ze-U1W"/>
                         <outlet property="onboardImageView" destination="0QX-Lw-6Yd" id="GI5-zi-D2M"/>
+                        <outlet property="signUpButton" destination="gix-Jr-2Ae" id="PJC-vh-C63"/>
                         <outlet property="titleLable" destination="81k-mc-zh6" id="voC-TD-hVV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Asr-xF-te2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="114"/>
+            <point key="canvasLocation" x="1895.6521739130437" y="113.83928571428571"/>
         </scene>
     </scenes>
     <resources>

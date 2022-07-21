@@ -14,8 +14,8 @@
             filePath = "Carol/ViewControllers/Onboarding/OnboardingPageViewController.swift"
             startingColumnNumber = "90"
             endingColumnNumber = "90"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "pageViewController(_:viewControllerBefore:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -7,6 +7,7 @@
 
 import UIKit
 import CHIPageControl
+import RxSwift
 
 class OnboardingViewController: UIViewController {
     
@@ -15,10 +16,18 @@ class OnboardingViewController: UIViewController {
     
     // MARK: - Properties
     weak var onBoardingPageViewController: OnboardingPageViewController?
+    var bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         customPageControl()
+        
+        skipButton.rx.tap
+            .subscribeNext { [weak self] _ in
+                guard let self = self else { return }
+                self.onBoardingPageViewController?.turnPage(to: self.pageControl.numberOfPages - 1)
+            }
+            .disposed(by: bag)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,12 +46,17 @@ class OnboardingViewController: UIViewController {
 }
 
 extension OnboardingViewController: OnboardingPageViewControllerDelegate {
+    
     func setupPageController(numberOfPage: Int) {
         pageControl.numberOfPages = numberOfPage
     }
     
-    func turnPageController(to index: Int) {
-        pageControl.progress = 0.5
-        pageControl.set(progress: index, animated: true)
+    func turnPageController(to index: Int, isLastItem: Bool?) {
+        skipButton.isHidden = isLastItem ?? true
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.pageControl.progress = 1
+            self.pageControl.set(progress: index, animated: true)
+        }
     }
 }

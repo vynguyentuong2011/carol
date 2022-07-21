@@ -11,7 +11,7 @@ import RxRelay
 
 protocol  OnboardingPageViewControllerDelegate: AnyObject {
     func setupPageController(numberOfPage: Int)
-    func turnPageController(to index: Int)
+    func turnPageController(to index: Int, isLastItem: Bool?)
 }
 
 class OnboardingPageViewController: UIPageViewController, OnboardingPagePresentable {
@@ -72,8 +72,17 @@ class OnboardingPageViewController: UIPageViewController, OnboardingPagePresenta
         }
         let onboardingContentVC = OnboardingContentViewController.instantiate()
         onboardingContentVC.item = currentOnboardingItem
+        onboardingContentVC.isLastItem = index == onboardingItems.count - 1 ? true : false
         self.pageViewControllerDelegate?.setupPageController(numberOfPage: onboardingItems.count)
         return onboardingContentVC
+    }
+    
+    func turnPage(to index: Int) {
+        currentIndex = index
+        if let currentController = contentViewController(at: index) {
+            setViewControllers([currentController], direction: .forward, animated: true)
+            self.pageViewControllerDelegate?.turnPageController(to: currentIndex, isLastItem: true)
+        }
     }
 }
 
@@ -109,7 +118,7 @@ extension OnboardingPageViewController: UIPageViewControllerDataSource {
             if let pageContentViewController = pageViewController.viewControllers?.first as? OnboardingContentViewController {
                 if let index = pageContentViewController.item?.index {
                     currentIndex = index
-                    self.pageViewControllerDelegate?.turnPageController(to: currentIndex)
+                    self.pageViewControllerDelegate?.turnPageController(to: currentIndex, isLastItem: currentIndex == onboardingItems.count - 1 ? true : false)
                 }
             }
         }

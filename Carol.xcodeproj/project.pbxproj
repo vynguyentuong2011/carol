@@ -86,6 +86,7 @@
 		3B082072288713E90073B8C5 /* CarolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B082076288713E90073B8C5 /* CarolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarolUITests.swift; sourceTree = "<group>"; };
 		3B082078288713E90073B8C5 /* CarolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarolUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3B67A1A628894CEC00BDC5AA /* Poppins Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Medium 500.ttf"; sourceTree = "<group>"; };
 		3B94C6D328871BAA0069461B /* Poppins Regular 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Regular 400.ttf"; sourceTree = "<group>"; };
 		3B94C6D428871BAA0069461B /* Poppins SemiBold 600.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins SemiBold 600.ttf"; sourceTree = "<group>"; };
 		3B94C6D928871D080069461B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +242,7 @@
 			children = (
 				3B94C6D328871BAA0069461B /* Poppins Regular 400.ttf */,
 				3B94C6D428871BAA0069461B /* Poppins SemiBold 600.ttf */,
+				3B67A1A628894CEC00BDC5AA /* Poppins Medium 500.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
