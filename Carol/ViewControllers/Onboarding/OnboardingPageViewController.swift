@@ -11,7 +11,7 @@ import RxRelay
 
 protocol  OnboardingPageViewControllerDelegate: AnyObject {
     func setupPageController(numberOfPage: Int)
-    func turnPageController(to index: Int)
+    func turnPageController(to index: Int, isLastItem: Bool?)
 }
 
 class OnboardingPageViewController: UIPageViewController, OnboardingPagePresentable {
@@ -58,6 +58,7 @@ class OnboardingPageViewController: UIPageViewController, OnboardingPagePresenta
             .subscribeNext { [weak self] items in
                 guard let self = self, items.count != 0 else { return }
                 self.onboardingItems = items
+                self.pageViewControllerDelegate?.setupPageController(numberOfPage: items.count)
             }
             .disposed(by: disposeBag)
     }
@@ -71,7 +72,8 @@ class OnboardingPageViewController: UIPageViewController, OnboardingPagePresenta
         }
         let onboardingContentVC = OnboardingContentViewController.instantiate()
         onboardingContentVC.item = currentOnboardingItem
-        pageViewControllerDelegate?.setupPageController(numberOfPage: onboardingItems.count)
+        onboardingContentVC.isLastItem = index == onboardingItems.count - 1 ? true : false
+        self.pageViewControllerDelegate?.setupPageController(numberOfPage: onboardingItems.count)
         return onboardingContentVC
     }
     
@@ -79,7 +81,7 @@ class OnboardingPageViewController: UIPageViewController, OnboardingPagePresenta
         currentIndex = index
         if let currentController = contentViewController(at: index) {
             setViewControllers([currentController], direction: .forward, animated: true)
-            self.pageViewControllerDelegate?.turnPageController(to: currentIndex)
+            self.pageViewControllerDelegate?.turnPageController(to: currentIndex, isLastItem: true)
         }
     }
 }
@@ -91,22 +93,34 @@ extension OnboardingPageViewController: UIPageViewControllerDelegate {
 extension OnboardingPageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if var index = (viewController as? OnboardingContentViewController)?.item?.index {
-            index += 1
+            if index == 0 {
+                return nil
+            }
+            index -= 1
             return contentViewController(at: index)
         }
         return UIViewController()
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if let pageContentViewController = pageViewController.viewControllers?.first as? OnboardingContentViewController {
-            if let currentIndex = pageContentViewController.item?.index {
-                self.pageViewControllerDelegate?.turnPageController(to: currentIndex)
+        if var index = (viewController as? OnboardingContentViewController)?.item?.index {
+            if index == onboardingItems.count - 1 {
+                return nil
             }
+            index += 1
+            return contentViewController(at: index)
         }
         return UIViewController()
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        
+        if finished {
+            if let pageContentViewController = pageViewController.viewControllers?.first as? OnboardingContentViewController {
+                if let index = pageContentViewController.item?.index {
+                    currentIndex = index
+                    self.pageViewControllerDelegate?.turnPageController(to: currentIndex, isLastItem: currentIndex == onboardingItems.count - 1 ? true : false)
+                }
+            }
+        }
     }
 }
