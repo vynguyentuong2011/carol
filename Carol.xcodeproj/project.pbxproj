@@ -18,6 +18,19 @@
 		3B08206D288713E90073B8C5 /* CarolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B08206C288713E90073B8C5 /* CarolTests.swift */; };
 		3B082077288713E90073B8C5 /* CarolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B082076288713E90073B8C5 /* CarolUITests.swift */; };
 		3B082079288713E90073B8C5 /* CarolUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B082078288713E90073B8C5 /* CarolUITestsLaunchTests.swift */; };
+		3B3F6DAB288A987200BB35FB /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DAA288A987200BB35FB /* UIViewController+Extension.swift */; };
+		3B3F6DAE288AA69B00BB35FB /* ValidateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DAD288AA69B00BB35FB /* ValidateHelper.swift */; };
+		3B3F6DB0288AA80A00BB35FB /* AuthenTextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DAF288AA80A00BB35FB /* AuthenTextFieldState.swift */; };
+		3B67A1A82889575000BDC5AA /* Authenticate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B67A1A72889575000BDC5AA /* Authenticate.storyboard */; };
+		3B67A1AB2889583E00BDC5AA /* AuthenTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B67A1AA2889583E00BDC5AA /* AuthenTextField.xib */; };
+		3B67A1AD2889596100BDC5AA /* AuthenTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A1AC2889596100BDC5AA /* AuthenTextField.swift */; };
+		3B67A1AF288959DF00BDC5AA /* AuthenTextField+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A1AE288959DF00BDC5AA /* AuthenTextField+Types.swift */; };
+		3B67A1B128895BF800BDC5AA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A1B028895BF800BDC5AA /* String+Extension.swift */; };
+		3B67A1B428897ED300BDC5AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A1B328897ED300BDC5AA /* LoginViewController.swift */; };
+		3B67A1B628897EEC00BDC5AA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A1B528897EEC00BDC5AA /* BaseViewController.swift */; };
+		3B67A1B82889801400BDC5AA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A1B72889801400BDC5AA /* LoginViewModel.swift */; };
+		3B67A1BA2889834C00BDC5AA /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A1B92889834C00BDC5AA /* LoginManager.swift */; };
+		3B6DB4EF288986F90024E6B6 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6DB4EE288986F90024E6B6 /* MainNavigationController.swift */; };
 		3B94C6D528871BAA0069461B /* Poppins Regular 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B94C6D328871BAA0069461B /* Poppins Regular 400.ttf */; };
 		3B94C6D628871BAA0069461B /* Poppins SemiBold 600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B94C6D428871BAA0069461B /* Poppins SemiBold 600.ttf */; };
 		3B94C6DA28871D080069461B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94C6D928871D080069461B /* OnboardingViewController.swift */; };
@@ -86,7 +99,20 @@
 		3B082072288713E90073B8C5 /* CarolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B082076288713E90073B8C5 /* CarolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarolUITests.swift; sourceTree = "<group>"; };
 		3B082078288713E90073B8C5 /* CarolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarolUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3B3F6DAA288A987200BB35FB /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		3B3F6DAD288AA69B00BB35FB /* ValidateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateHelper.swift; sourceTree = "<group>"; };
+		3B3F6DAF288AA80A00BB35FB /* AuthenTextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenTextFieldState.swift; sourceTree = "<group>"; };
 		3B67A1A628894CEC00BDC5AA /* Poppins Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Medium 500.ttf"; sourceTree = "<group>"; };
+		3B67A1A72889575000BDC5AA /* Authenticate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authenticate.storyboard; sourceTree = "<group>"; };
+		3B67A1AA2889583E00BDC5AA /* AuthenTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenTextField.xib; sourceTree = "<group>"; };
+		3B67A1AC2889596100BDC5AA /* AuthenTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenTextField.swift; sourceTree = "<group>"; };
+		3B67A1AE288959DF00BDC5AA /* AuthenTextField+Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenTextField+Types.swift"; sourceTree = "<group>"; };
+		3B67A1B028895BF800BDC5AA /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		3B67A1B328897ED300BDC5AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3B67A1B528897EEC00BDC5AA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3B67A1B72889801400BDC5AA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3B67A1B92889834C00BDC5AA /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		3B6DB4EE288986F90024E6B6 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		3B94C6D328871BAA0069461B /* Poppins Regular 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Regular 400.ttf"; sourceTree = "<group>"; };
 		3B94C6D428871BAA0069461B /* Poppins SemiBold 600.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins SemiBold 600.ttf"; sourceTree = "<group>"; };
 		3B94C6D928871D080069461B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +221,7 @@
 		3B082051288713E80073B8C5 /* Carol */ = {
 			isa = PBXGroup;
 			children = (
+				3B3F6DAC288AA68F00BB35FB /* Helpers */,
 				3B94C715288727920069461B /* Extensions */,
 				3B94C70F2887253E0069461B /* Repositories */,
 				3B94C6DB28871D310069461B /* Common */,
@@ -227,6 +254,51 @@
 			path = CarolUITests;
 			sourceTree = "<group>";
 		};
+		3B3F6DAC288AA68F00BB35FB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F6DAD288AA69B00BB35FB /* ValidateHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3B67A1A92889579900BDC5AA /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				3B6DB4ED288986F00024E6B6 /* Navigation */,
+				3B6DB4EC288986E20024E6B6 /* AuthenTextField */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		3B67A1B228897EC400BDC5AA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3B67A1B328897ED300BDC5AA /* LoginViewController.swift */,
+				3B67A1B72889801400BDC5AA /* LoginViewModel.swift */,
+				3B67A1B92889834C00BDC5AA /* LoginManager.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3B6DB4EC288986E20024E6B6 /* AuthenTextField */ = {
+			isa = PBXGroup;
+			children = (
+				3B67A1AA2889583E00BDC5AA /* AuthenTextField.xib */,
+				3B67A1AC2889596100BDC5AA /* AuthenTextField.swift */,
+				3B67A1AE288959DF00BDC5AA /* AuthenTextField+Types.swift */,
+			);
+			path = AuthenTextField;
+			sourceTree = "<group>";
+		};
+		3B6DB4ED288986F00024E6B6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				3B6DB4EE288986F90024E6B6 /* MainNavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		3B94C6D128871B760069461B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				3B082058288713E80073B8C5 /* Main.storyboard */,
+				3B67A1A72889575000BDC5AA /* Authenticate.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -258,7 +331,10 @@
 		3B94C6D828871CDF0069461B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3B67A1B228897EC400BDC5AA /* Login */,
 				3B94C6DC28871E1D0069461B /* Onboarding */,
+				3B67A1B528897EEC00BDC5AA /* BaseViewController.swift */,
+				3B3F6DAF288AA80A00BB35FB /* AuthenTextFieldState.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -266,6 +342,7 @@
 		3B94C6DB28871D310069461B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3B67A1A92889579900BDC5AA /* DesignSystem */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -313,6 +390,8 @@
 			children = (
 				3B94C716288727A30069461B /* Observable+bind.swift */,
 				3B94C71A288733520069461B /* UIColor+Extention.swift */,
+				3B67A1B028895BF800BDC5AA /* String+Extension.swift */,
+				3B3F6DAA288A987200BB35FB /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -460,7 +539,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B67A1A82889575000BDC5AA /* Authenticate.storyboard in Resources */,
 				3B082062288713E90073B8C5 /* LaunchScreen.storyboard in Resources */,
+				3B67A1AB2889583E00BDC5AA /* AuthenTextField.xib in Resources */,
 				3B94C6D628871BAA0069461B /* Poppins SemiBold 600.ttf in Resources */,
 				3B08205F288713E90073B8C5 /* Assets.xcassets in Resources */,
 				3B94C6D528871BAA0069461B /* Poppins Regular 400.ttf in Resources */,
@@ -576,18 +657,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B67A1B128895BF800BDC5AA /* String+Extension.swift in Sources */,
+				3B67A1AD2889596100BDC5AA /* AuthenTextField.swift in Sources */,
 				3B94C71928872EE70069461B /* OnboardingManager.swift in Sources */,
 				3B94C717288727A30069461B /* Observable+bind.swift in Sources */,
 				3B94C7142887261A0069461B /* CRConfigRepository.swift in Sources */,
+				3B67A1BA2889834C00BDC5AA /* LoginManager.swift in Sources */,
+				3B67A1B628897EEC00BDC5AA /* BaseViewController.swift in Sources */,
 				3B082053288713E80073B8C5 /* AppDelegate.swift in Sources */,
 				3B94C70E288724A50069461B /* OnboardingItem.swift in Sources */,
 				3B94C6DA28871D080069461B /* OnboardingViewController.swift in Sources */,
 				3B94C6E2288720F90069461B /* OnboardingContentViewController.swift in Sources */,
 				3B94C7122887257A0069461B /* CRConfigService.swift in Sources */,
+				3B3F6DB0288AA80A00BB35FB /* AuthenTextFieldState.swift in Sources */,
+				3B3F6DAB288A987200BB35FB /* UIViewController+Extension.swift in Sources */,
 				3B94C6E028871F2E0069461B /* OnboardingPageViewModel.swift in Sources */,
 				3B94C71B288733520069461B /* UIColor+Extention.swift in Sources */,
 				3B94C6DE28871E2A0069461B /* OnboardingPageViewController.swift in Sources */,
+				3B67A1B428897ED300BDC5AA /* LoginViewController.swift in Sources */,
+				3B3F6DAE288AA69B00BB35FB /* ValidateHelper.swift in Sources */,
+				3B67A1AF288959DF00BDC5AA /* AuthenTextField+Types.swift in Sources */,
 				3B082055288713E80073B8C5 /* SceneDelegate.swift in Sources */,
+				3B6DB4EF288986F90024E6B6 /* MainNavigationController.swift in Sources */,
+				3B67A1B82889801400BDC5AA /* LoginViewModel.swift in Sources */,
 				3B08205D288713E80073B8C5 /* Carol.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

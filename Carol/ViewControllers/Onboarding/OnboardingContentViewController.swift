@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class OnboardingContentViewController: UIViewController {
     
@@ -29,10 +30,11 @@ class OnboardingContentViewController: UIViewController {
     
     internal var item: OnboardingItem?
     var isLastItem: Bool = false
+    private var bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureActions()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,6 +65,17 @@ class OnboardingContentViewController: UIViewController {
         loginButton.layer.borderWidth = 1
         loginButton.layer.borderColor = UIColor(rgb: 0x3D5CFF).cgColor
         loginButton.sizeToFit()
+    }
+    
+    private func configureActions() {
+        loginButton.rx.tap
+            .subscribeNext { _ in
+                if let rootVC = UIApplication.shared.keyWindow?.rootViewController {
+                    LoginManager.shared
+                        .presentSignInViewController(viewController: rootVC, completion: nil)
+                }
+            }
+            .disposed(by: bag)
     }
     
     private var attSetupTitle: NSAttributedString {

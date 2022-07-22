@@ -196,6 +196,11 @@
             <point key="canvasLocation" x="1895.6521739130437" y="113.83928571428571"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="EZs-9o-gTa">
+            <size key="intrinsicContentSize" width="33" height="6"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
