@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Poppins Medium 500.ttf">
+            <string>Poppins-Medium</string>
+        </array>
         <array key="Poppins Regular 400.ttf">
             <string>Poppins-Regular</string>
         </array>
@@ -312,6 +315,69 @@
             </objects>
             <point key="canvasLocation" x="2515" y="90"/>
         </scene>
+        <!--Change Password Success View Controller-->
+        <scene sceneID="Rtj-gM-XgE">
+            <objects>
+                <viewController storyboardIdentifier="ChangePasswordSuccessViewController" id="n1d-ZN-NLM" customClass="ChangePasswordSuccessViewController" customModule="Carol" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eKv-Ks-hQ0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="H6C-zC-TWa">
+                                <rect key="frame" x="137" y="244" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Far-d3-Ofz"/>
+                                    <constraint firstAttribute="width" constant="140" id="cgX-36-PX0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DY-pa-uA3">
+                                <rect key="frame" x="174" y="404" width="66.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations, you have completed change password!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olo-3T-irG">
+                                <rect key="frame" x="107" y="446.5" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="xJw-hm-Uj1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                <color key="textColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uI2-RA-iqi">
+                                <rect key="frame" x="24" y="500.5" width="366" height="50"/>
+                                <color key="backgroundColor" red="0.23921568627450979" green="0.36078431372549019" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wNV-ul-jjR"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log in"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CCg-eu-IiT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H6C-zC-TWa" firstAttribute="centerX" secondItem="eKv-Ks-hQ0" secondAttribute="centerX" id="8UV-sH-WY3"/>
+                            <constraint firstItem="olo-3T-irG" firstAttribute="centerX" secondItem="eKv-Ks-hQ0" secondAttribute="centerX" id="8dQ-GH-nBc"/>
+                            <constraint firstItem="CCg-eu-IiT" firstAttribute="trailing" secondItem="uI2-RA-iqi" secondAttribute="trailing" constant="24" id="Azb-Ob-WlZ"/>
+                            <constraint firstItem="8DY-pa-uA3" firstAttribute="top" secondItem="H6C-zC-TWa" secondAttribute="bottom" constant="20" id="DXM-ZC-wKS"/>
+                            <constraint firstItem="8DY-pa-uA3" firstAttribute="centerX" secondItem="eKv-Ks-hQ0" secondAttribute="centerX" id="Fz7-1h-3Q2"/>
+                            <constraint firstItem="H6C-zC-TWa" firstAttribute="top" secondItem="CCg-eu-IiT" secondAttribute="top" constant="200" id="OZz-sg-uYw"/>
+                            <constraint firstItem="olo-3T-irG" firstAttribute="top" secondItem="8DY-pa-uA3" secondAttribute="bottom" constant="20" id="dJn-Ne-xbU"/>
+                            <constraint firstItem="uI2-RA-iqi" firstAttribute="top" secondItem="olo-3T-irG" secondAttribute="bottom" constant="20" id="opL-zU-6mi"/>
+                            <constraint firstItem="uI2-RA-iqi" firstAttribute="leading" secondItem="CCg-eu-IiT" secondAttribute="leading" constant="24" id="uJC-O3-9DW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="uI2-RA-iqi" id="bLO-W3-06L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TQ7-ux-wkn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3190" y="90"/>
+        </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="YTE-Ef-KJq">
             <objects>
@@ -332,6 +398,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="success" width="140" height="140"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

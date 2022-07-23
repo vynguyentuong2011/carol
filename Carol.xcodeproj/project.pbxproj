@@ -24,6 +24,7 @@
 		3B3F6DB4288BECEF00BB35FB /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DB3288BECEF00BB35FB /* ChangePasswordViewController.swift */; };
 		3B3F6DB6288BED3E00BB35FB /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DB5288BED3E00BB35FB /* ChangePasswordViewModel.swift */; };
 		3B3F6DB8288BF18900BB35FB /* ChangePasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DB7288BF18900BB35FB /* ChangePasswordManager.swift */; };
+		3B3F6DBA288C037800BB35FB /* ChangePasswordSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DB9288C037700BB35FB /* ChangePasswordSuccessViewController.swift */; };
 		3B67A1A82889575000BDC5AA /* Authenticate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B67A1A72889575000BDC5AA /* Authenticate.storyboard */; };
 		3B67A1AB2889583E00BDC5AA /* AuthenTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B67A1AA2889583E00BDC5AA /* AuthenTextField.xib */; };
 		3B67A1AD2889596100BDC5AA /* AuthenTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A1AC2889596100BDC5AA /* AuthenTextField.swift */; };
@@ -108,6 +109,7 @@
 		3B3F6DB3288BECEF00BB35FB /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		3B3F6DB5288BED3E00BB35FB /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		3B3F6DB7288BF18900BB35FB /* ChangePasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordManager.swift; sourceTree = "<group>"; };
+		3B3F6DB9288C037700BB35FB /* ChangePasswordSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordSuccessViewController.swift; sourceTree = "<group>"; };
 		3B67A1A628894CEC00BDC5AA /* Poppins Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Medium 500.ttf"; sourceTree = "<group>"; };
 		3B67A1A72889575000BDC5AA /* Authenticate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authenticate.storyboard; sourceTree = "<group>"; };
 		3B67A1AA2889583E00BDC5AA /* AuthenTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenTextField.xib; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				3B3F6DB3288BECEF00BB35FB /* ChangePasswordViewController.swift */,
 				3B3F6DB5288BED3E00BB35FB /* ChangePasswordViewModel.swift */,
 				3B3F6DB7288BF18900BB35FB /* ChangePasswordManager.swift */,
+				3B3F6DB9288C037700BB35FB /* ChangePasswordSuccessViewController.swift */,
 			);
 			path = ChangePassword;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				3B94C6DE28871E2A0069461B /* OnboardingPageViewController.swift in Sources */,
 				3B67A1B428897ED300BDC5AA /* LoginViewController.swift in Sources */,
 				3B3F6DB4288BECEF00BB35FB /* ChangePasswordViewController.swift in Sources */,
+				3B3F6DBA288C037800BB35FB /* ChangePasswordSuccessViewController.swift in Sources */,
 				3B3F6DAE288AA69B00BB35FB /* ValidateHelper.swift in Sources */,
 				3B67A1AF288959DF00BDC5AA /* AuthenTextField+Types.swift in Sources */,
 				3B082055288713E80073B8C5 /* SceneDelegate.swift in Sources */,

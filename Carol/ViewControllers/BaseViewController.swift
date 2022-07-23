@@ -30,6 +30,16 @@ public class BaseViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
+    func setupDismissButtonItem() {
+        let backButtonItem = UIBarButtonItem(image: UIImage(named: "close"), style: .plain, target: self, action: #selector(dismissButtonHandle))
+        backButtonItem.title = ""
+        self.navigationItem.leftBarButtonItem = backButtonItem
+    }
+    
+    @objc func dismissButtonHandle() {
+        self.navigationController?.dismiss(animated: true)
+    }
+    
     // MARK: - keyboard
     
     func configureIQKeyboard() {

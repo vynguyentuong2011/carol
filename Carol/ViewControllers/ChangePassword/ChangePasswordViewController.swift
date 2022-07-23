@@ -96,7 +96,9 @@ class ChangePasswordViewController: BaseViewController, ChangePasswordPresentabl
         changePasswordBtn.rx.tap
             .subscribeNext { [weak self] _ in
                 guard let self = self else { return }
-                
+                let successViewController = ChangePasswordSuccessViewController.instantiate()
+                successViewController.modalPresentationStyle = .fullScreen
+                self.navigationController?.present(successViewController, animated: true)
             }
             .disposed(by: disposeBag)
     }
