@@ -48,6 +48,7 @@ class LoginViewController: BaseViewController, LoginPresentable {
         super.viewDidLoad()
         viewModel.didBecomeActive()
         configurePresenter()
+        configureAction()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,22 +59,18 @@ class LoginViewController: BaseViewController, LoginPresentable {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setupUI()
-        navigationController?.isNavigationBarHidden = true
-    }
-    
-    override func setupNotification() {
         
     }
     
     private func setupUI() {
-        emailTitle.text = "Email"
-        passwordTitle.text = "Password"
+        emailTitle.attributedText = LoginViewController.attributedTextTitle(title: "Email")
+        passwordTitle.attributedText = LoginViewController.attributedTextTitle(title: "Password")
         
-        emailTextField.atributedTitle = LoginViewController.attributedTitle(title: "Enter your email", required: true)
+        emailTextField.atributedTitle = LoginViewController.attributedTitle(title: "Enter your email")
         emailTextField.keyboardType = .emailAddress
         emailTextField.clearButtonMode = .whileEditing
         
-        passwordTextField.atributedTitle = LoginViewController.attributedTitle(title: "Enter your password", required: true)
+        passwordTextField.atributedTitle = LoginViewController.attributedTitle(title: "Enter your password")
         passwordTextField.keyboardType = .default
         passwordTextField.isSecureTextEntry = true
         
@@ -92,6 +89,7 @@ class LoginViewController: BaseViewController, LoginPresentable {
                 guard let self = self else { return }
             }
             .disposed(by: disposeBag)
+        
     }
     
     private func configurePresenter() {
@@ -123,16 +121,40 @@ class LoginViewController: BaseViewController, LoginPresentable {
         }).disposed(by: disposeBag)
     }
     
+    private func configureAction() {
+        loginButton.rx.tap
+            .subscribeNext { [weak self] _ in
+                
+            }
+            .disposed(by: disposeBag)
+        
+        forgetPasswordButton.rx.tap
+            .subscribeNext { [weak self] _ in
+                if let changePassword = ChangePasswordManager.shared.getChangePasswordViewController() {
+                    self?.navigationController?.pushViewController(changePassword, animated: true)
+                }
+            }
+            .disposed(by: disposeBag)
+    }
+    
     override func handleState(_ state: AuthenTextFieldState, _ textField: AuthenTextField) {
         super.handleState(state, textField)
     }
 }
 
 extension LoginViewController {
-    public static func attributedTitle(title: String, required: Bool) -> NSAttributedString? {
+    public static func attributedTitle(title: String) -> NSAttributedString? {
         let att = NSMutableAttributedString(
             string: title,
             attributes: [.foregroundColor: UIColor(rgb: 0x858597)]
+        )
+        return att
+    }
+    
+    public static func attributedTextTitle(title: String) -> NSAttributedString? {
+        let att = NSMutableAttributedString(
+            string: title,
+            attributes: [.foregroundColor: UIColor(rgb: 0x5555CB)]
         )
         return att
     }
@@ -141,7 +163,7 @@ extension LoginViewController {
         let att = NSMutableAttributedString(
             string: title,
             attributes: [
-                .foregroundColor: UIColor(rgb: 0x3D5CFF),
+                .foregroundColor: UIColor(rgb: 0x5555CB),
                 .font: UIFont.systemFont(ofSize: 14)
             ]
         )
@@ -164,7 +186,7 @@ extension LoginViewController {
             string: title,
             attributes: [.foregroundColor: UIColor(rgb: 0x858597)]
         )
-        let signUp = NSAttributedString(string: " Sign up", attributes: [.foregroundColor: UIColor(rgb: 0x3D5CFF)])
+        let signUp = NSAttributedString(string: " Sign up", attributes: [.foregroundColor: UIColor(rgb: 0x5555CB)])
         att.append(signUp)
         return att
     }

@@ -1,30 +1,31 @@
 //
-//  LoginViewModel.swift
+//  ChangePasswordViewModel.swift
 //  Carol
 //
-//  Created by Vi Nguyen on 21/07/2022.
+//  Created by Vi Nguyen on 23/07/2022.
 //
 
 import Foundation
 import RxSwift
 import RxRelay
 
-protocol LoginPresentableListener: AnyObject {
+protocol ChangePasswordPresentableListener: AnyObject {
     func didBecomeActive()
 }
 
-protocol LoginPresentable: AnyObject {
+protocol ChangePasswordPresentable: AnyObject {
     var showLoading: BehaviorRelay<Bool> { get }
     var submitServerErrorMessage: BehaviorRelay<String?> { get }
 }
 
-class LoginViewModel: LoginPresentableListener {
+class ChangePasswordViewModel: ChangePasswordPresentableListener {
     
     // MARK: - Properties
-    weak var presenter: LoginPresentable?
-    internal var listening: LoginPresentableListener { return self }
+    weak var presenter: ChangePasswordPresentable?
+    internal var listening: ChangePasswordPresentableListener { return self }
     private var disposeBag = DisposeBag()
-//    private lazy var getLoginAction = makeLoginAction()
+    
+    let confirmPasswordState = BehaviorRelay<AuthenTextFieldState>(value: .idle)
     
     /// Emits editing changed with value
     var editingChanged: Observable<String?> {
@@ -35,7 +36,6 @@ class LoginViewModel: LoginPresentableListener {
             .distinctUntilChanged({ $0 == $1 })
         return Observable.of(begin, textChanged).merge()
     }
-    let emailState = BehaviorRelay<AuthenTextFieldState>(value: .idle)
     
     /// Emits when end editing
     var endEditing: Observable<Void> {
@@ -51,12 +51,11 @@ class LoginViewModel: LoginPresentableListener {
     private let endEditingRelay: PublishRelay<Void> = .init()
     
     func beginEdit() {
-        self.emailState.accept(.active)
+        self.confirmPasswordState.accept(.active)
         beginEditingRelay.accept(())
     }
     
     func endEdit() {
-        validateEmail()
         endEditingRelay.accept(())
     }
     
@@ -64,34 +63,15 @@ class LoginViewModel: LoginPresentableListener {
         self.textRelay.accept(text)
     }
     
-    func didBecomeActive() {
-        disposeBag = DisposeBag()
-        configureActions()
-        configureListener()
-    }
-    
-    func validateEmail() {
-        if ValidateHelper.isValidEmail(currentText ?? "") {
-            self.emailState.accept(.idle)
+    func validatePassword(_ old: String, _ new: String) {
+        if old == new {
+            self.confirmPasswordState.accept(.idle)
         } else {
-            self.emailState.accept(.error("Invalid email"))
+            self.confirmPasswordState.accept(.error("New password not matched"))
         }
     }
     
-    private func configureActions() {
-        guard let presenter = presenter else { return }
+    func didBecomeActive() {
         
     }
-    
-    private func configureListener() {
-        
-    }
-}
-
-extension LoginViewModel {
-//    func makeLoginAction() -> Action<Void, [AbuseReason]> {
-//        .init { [unowned self] args in
-//            return self.formRepository.requestFormConfig(category: categoryId, adType: adType)
-//        }
-//    }
 }

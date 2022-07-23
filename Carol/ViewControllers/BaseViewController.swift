@@ -17,7 +17,17 @@ public class BaseViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        setupNotification()
+        
+    }
+    
+    func setupBackButtonItem() {
+        let backButtonItem = UIBarButtonItem(image: UIImage(named: "left"), style: .plain, target: self, action: #selector(backButtonHandle))
+        backButtonItem.title = ""
+        self.navigationItem.leftBarButtonItem = backButtonItem
+    }
+    
+    @objc func backButtonHandle() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     // MARK: - keyboard
