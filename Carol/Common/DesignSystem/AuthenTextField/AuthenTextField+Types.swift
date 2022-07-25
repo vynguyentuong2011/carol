@@ -19,13 +19,13 @@ extension AuthenTextField {
     /// The mode height of border component
     public enum Height {
 
-        /// The height of component is 50
+        /// The height of component is 48
         case normal
         case custom(_ value: CGFloat)
         
         var value: CGFloat {
             switch self {
-            case .normal: return 50.0
+            case .normal: return 48.0
             case .custom(let value):
                 return value
             }

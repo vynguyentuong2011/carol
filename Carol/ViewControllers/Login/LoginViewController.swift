@@ -63,8 +63,8 @@ class LoginViewController: BaseViewController, LoginPresentable {
     }
     
     private func setupUI() {
-        emailTitle.attributedText = LoginViewController.attributedTextTitle(title: "Email")
-        passwordTitle.attributedText = LoginViewController.attributedTextTitle(title: "Password")
+        emailTitle.attributedText = LoginViewController.attributedTextTitle(title: "Email", required: true)
+        passwordTitle.attributedText = LoginViewController.attributedTextTitle(title: "Password", required: true)
         
         emailTextField.atributedTitle = LoginViewController.attributedTitle(title: "Enter your email")
         emailTextField.keyboardType = .emailAddress
@@ -85,8 +85,10 @@ class LoginViewController: BaseViewController, LoginPresentable {
         alreadyHaveAccountLabel.attributedText = LoginViewController.alreadyAttributedTitle(title: "Don’t have an account?")
         alreadyHaveAccountLabel.rx.tapGesture()
             .when(.recognized)
+            .mapToVoid()
             .subscribeNext { [weak self] _ in
                 guard let self = self else { return }
+                SignupManager.shared.presentSignUpViewController(viewController: self, completion: nil)
             }
             .disposed(by: disposeBag)
         
@@ -151,11 +153,16 @@ extension LoginViewController {
         return att
     }
     
-    public static func attributedTextTitle(title: String) -> NSAttributedString? {
+    public static func attributedTextTitle(title: String, required: Bool) -> NSAttributedString? {
         let att = NSMutableAttributedString(
             string: title,
             attributes: [.foregroundColor: UIColor(rgb: 0x5555CB)]
         )
+        if required {
+            let symbol = NSAttributedString(string: " *", attributes: [.foregroundColor: UIColor.red])
+            att.append(symbol)
+        }
+        return att
         return att
     }
     

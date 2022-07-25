@@ -75,7 +75,7 @@ public class BaseViewController: UIViewController {
         case .error(let msg):
             textField.isEnabled = true
             textField.errorMessage = msg
-            textField.borderColor = UIColor(rgb: 0xFFEBF0)
+            textField.borderColor = UIColor(rgb: 0xFF6905)
         }
     }
 }

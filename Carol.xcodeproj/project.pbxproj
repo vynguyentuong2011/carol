@@ -25,6 +25,9 @@
 		3B3F6DB6288BED3E00BB35FB /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DB5288BED3E00BB35FB /* ChangePasswordViewModel.swift */; };
 		3B3F6DB8288BF18900BB35FB /* ChangePasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DB7288BF18900BB35FB /* ChangePasswordManager.swift */; };
 		3B3F6DBA288C037800BB35FB /* ChangePasswordSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DB9288C037700BB35FB /* ChangePasswordSuccessViewController.swift */; };
+		3B3F6DBD288C23CC00BB35FB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DBC288C23CC00BB35FB /* SignupViewController.swift */; };
+		3B3F6DBF288C23DD00BB35FB /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DBE288C23DD00BB35FB /* SignupViewModel.swift */; };
+		3B3F6DC1288C26FE00BB35FB /* SignupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DC0288C26FE00BB35FB /* SignupManager.swift */; };
 		3B67A1A82889575000BDC5AA /* Authenticate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B67A1A72889575000BDC5AA /* Authenticate.storyboard */; };
 		3B67A1AB2889583E00BDC5AA /* AuthenTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B67A1AA2889583E00BDC5AA /* AuthenTextField.xib */; };
 		3B67A1AD2889596100BDC5AA /* AuthenTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A1AC2889596100BDC5AA /* AuthenTextField.swift */; };
@@ -110,6 +113,9 @@
 		3B3F6DB5288BED3E00BB35FB /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		3B3F6DB7288BF18900BB35FB /* ChangePasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordManager.swift; sourceTree = "<group>"; };
 		3B3F6DB9288C037700BB35FB /* ChangePasswordSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordSuccessViewController.swift; sourceTree = "<group>"; };
+		3B3F6DBC288C23CC00BB35FB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		3B3F6DBE288C23DD00BB35FB /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		3B3F6DC0288C26FE00BB35FB /* SignupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupManager.swift; sourceTree = "<group>"; };
 		3B67A1A628894CEC00BDC5AA /* Poppins Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Medium 500.ttf"; sourceTree = "<group>"; };
 		3B67A1A72889575000BDC5AA /* Authenticate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authenticate.storyboard; sourceTree = "<group>"; };
 		3B67A1AA2889583E00BDC5AA /* AuthenTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenTextField.xib; sourceTree = "<group>"; };
@@ -288,6 +294,16 @@
 			path = ChangePassword;
 			sourceTree = "<group>";
 		};
+		3B3F6DBB288C23BB00BB35FB /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F6DBC288C23CC00BB35FB /* SignupViewController.swift */,
+				3B3F6DBE288C23DD00BB35FB /* SignupViewModel.swift */,
+				3B3F6DC0288C26FE00BB35FB /* SignupManager.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		3B67A1A92889579900BDC5AA /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +373,7 @@
 		3B94C6D828871CDF0069461B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3B3F6DBB288C23BB00BB35FB /* SignUp */,
 				3B3F6DB2288BECDA00BB35FB /* ChangePassword */,
 				3B67A1B228897EC400BDC5AA /* Login */,
 				3B94C6DC28871E1D0069461B /* Onboarding */,
@@ -691,6 +708,7 @@
 				3B3F6DB6288BED3E00BB35FB /* ChangePasswordViewModel.swift in Sources */,
 				3B94C717288727A30069461B /* Observable+bind.swift in Sources */,
 				3B94C7142887261A0069461B /* CRConfigRepository.swift in Sources */,
+				3B3F6DBF288C23DD00BB35FB /* SignupViewModel.swift in Sources */,
 				3B67A1BA2889834C00BDC5AA /* LoginManager.swift in Sources */,
 				3B67A1B628897EEC00BDC5AA /* BaseViewController.swift in Sources */,
 				3B082053288713E80073B8C5 /* AppDelegate.swift in Sources */,
@@ -698,6 +716,7 @@
 				3B94C70E288724A50069461B /* OnboardingItem.swift in Sources */,
 				3B94C6DA28871D080069461B /* OnboardingViewController.swift in Sources */,
 				3B94C6E2288720F90069461B /* OnboardingContentViewController.swift in Sources */,
+				3B3F6DC1288C26FE00BB35FB /* SignupManager.swift in Sources */,
 				3B94C7122887257A0069461B /* CRConfigService.swift in Sources */,
 				3B3F6DB0288AA80A00BB35FB /* AuthenTextFieldState.swift in Sources */,
 				3B3F6DAB288A987200BB35FB /* UIViewController+Extension.swift in Sources */,
@@ -712,6 +731,7 @@
 				3B082055288713E80073B8C5 /* SceneDelegate.swift in Sources */,
 				3B6DB4EF288986F90024E6B6 /* MainNavigationController.swift in Sources */,
 				3B67A1B82889801400BDC5AA /* LoginViewModel.swift in Sources */,
+				3B3F6DBD288C23CC00BB35FB /* SignupViewController.swift in Sources */,
 				3B08205D288713E80073B8C5 /* Carol.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

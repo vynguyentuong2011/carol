@@ -60,9 +60,9 @@ class ChangePasswordViewController: BaseViewController, ChangePasswordPresentabl
     }
     
     private func setupUI() {
-        currentPasswordLabel.attributedText = LoginViewController.attributedTextTitle(title: "Current Password")
-        passwordLabel.attributedText = LoginViewController.attributedTextTitle(title: "New Password")
-        repeatPasswordLabel.attributedText = LoginViewController.attributedTextTitle(title: "Confirm New Password")
+        currentPasswordLabel.attributedText = LoginViewController.attributedTextTitle(title: "Current Password", required: true)
+        passwordLabel.attributedText = LoginViewController.attributedTextTitle(title: "New Password", required: true)
+        repeatPasswordLabel.attributedText = LoginViewController.attributedTextTitle(title: "Confirm New Password", required: true)
         
         currentPasswordTextField.atributedTitle = LoginViewController.attributedTitle(title: "Enter current password")
         currentPasswordTextField.isSecureTextEntry = true

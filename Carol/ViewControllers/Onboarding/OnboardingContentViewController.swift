@@ -76,6 +76,14 @@ class OnboardingContentViewController: UIViewController {
                 }
             }
             .disposed(by: bag)
+        
+        signUpButton.rx.tap
+            .subscribeNext { _ in
+                if let rootVC = UIApplication.shared.keyWindow?.rootViewController {
+                   SignupManager.shared.presentSignUpViewController(viewController: rootVC, completion: nil)
+                }
+            }
+            .disposed(by: bag)
     }
     
     private var attSetupTitle: NSAttributedString {

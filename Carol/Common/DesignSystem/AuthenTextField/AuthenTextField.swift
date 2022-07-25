@@ -482,7 +482,7 @@ public final class AuthenTextField: UIView {
         
         borderViewInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         interbuttonSpacing = 2.0
-        borderViewBottomSpacing = 4.0
+        borderViewBottomSpacing = 2.0
         autocorrectionType = .no
         internalTextField.fixedAtEndCursorPosition = false
         internalTextField.delegate = delegate ?? self

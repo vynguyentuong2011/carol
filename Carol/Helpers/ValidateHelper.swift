@@ -18,8 +18,8 @@ class ValidateHelper {
     
     static public func isValidPassword(_ password: String) -> Bool {
         let password = password.trimmingCharacters(in: CharacterSet.whitespaces)
-        let passwordRegx = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&<>*~:`-]).{8,}$"
-        let passwordCheck = NSPredicate(format: "SELF MATCHES %@",passwordRegx)
+        let passwordRegx = "(?:(?:(?=.*?[0-9])(?=.*?[-!@#$%&*ˆ+=_])|(?:(?=.*?[0-9])|(?=.*?[A-Z])|(?=.*?[-!@#$%&*ˆ+=_])))|(?=.*?[a-z])(?=.*?[0-9])(?=.*?[-!@#$%&*ˆ+=_]))[A-Za-z0-9-!@#$%&*ˆ+=_]{6,15}"
+        let passwordCheck = NSPredicate(format: "SELF MATCHES %@", passwordRegx)
         return passwordCheck.evaluate(with: password)
     }
 }

@@ -36,12 +36,7 @@ class LoginViewModel: LoginPresentableListener {
         return Observable.of(begin, textChanged).merge()
     }
     let emailState = BehaviorRelay<AuthenTextFieldState>(value: .idle)
-    
-    /// Emits when end editing
-    var endEditing: Observable<Void> {
-        return endEditingRelay.asObservable()
-    }
-    
+
     var currentText: String? {
         textRelay.value
     }
