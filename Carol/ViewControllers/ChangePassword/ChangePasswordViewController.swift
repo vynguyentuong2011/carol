@@ -78,11 +78,20 @@ class ChangePasswordViewController: BaseViewController, ChangePasswordPresentabl
     }
     
     private func configurePresenter() {
-        guard let viewModel = viewModel else { return }
+        presenting.showLoading
+            .asDriver()
+            .drive(onNext: { [weak self] show in
+                guard let self = self else { return }
+                if show {
+                    self.showLoadingView()
+                } else {
+                    self.dismissLoadingView()
+                }
+            }).disposed(by: disposeBag)
         
         repeatPasswordTextField.didEndEditing = { [weak self] in
             guard let self = self else { return }
-            viewModel.validatePassword(self.passwordTextField.text ?? "", self.repeatPasswordTextField.text ?? "")
+            self.viewModel.validatePassword(self.passwordTextField.text ?? "", self.repeatPasswordTextField.text ?? "")
         }
         
         viewModel.confirmPasswordState.subscribeNext({ [weak self] state in

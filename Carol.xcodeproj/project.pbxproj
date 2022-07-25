@@ -28,6 +28,17 @@
 		3B3F6DBD288C23CC00BB35FB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DBC288C23CC00BB35FB /* SignupViewController.swift */; };
 		3B3F6DBF288C23DD00BB35FB /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DBE288C23DD00BB35FB /* SignupViewModel.swift */; };
 		3B3F6DC1288C26FE00BB35FB /* SignupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DC0288C26FE00BB35FB /* SignupManager.swift */; };
+		3B3F6DC4288E382A00BB35FB /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DC3288E382A00BB35FB /* SubscribeViewController.swift */; };
+		3B3F6DC6288E384500BB35FB /* SubscribeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DC5288E384400BB35FB /* SubscribeViewModel.swift */; };
+		3B3F6DC9288E3C7300BB35FB /* SubscribeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3F6DC8288E3C7300BB35FB /* SubscribeTableViewCell.xib */; };
+		3B3F6DCB288E3DCF00BB35FB /* SubscribeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DCA288E3DCF00BB35FB /* SubscribeTableViewCell.swift */; };
+		3B3F6DCD288E3DF600BB35FB /* SubscribeTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DCC288E3DF600BB35FB /* SubscribeTableViewViewModel.swift */; };
+		3B3F6DCF288E411C00BB35FB /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DCE288E411C00BB35FB /* UITableViewCell+Extension.swift */; };
+		3B3F6DD2288E479D00BB35FB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DD1288E479D00BB35FB /* Constant.swift */; };
+		3B3F6DD5288E49E200BB35FB /* SubscribeServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DD4288E49E200BB35FB /* SubscribeServiceType.swift */; };
+		3B3F6DD8288E4A2500BB35FB /* SubscribeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DD7288E4A2500BB35FB /* SubscribeModel.swift */; };
+		3B3F6DDA288E4B6200BB35FB /* SubscribeRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DD9288E4B6200BB35FB /* SubscribeRepositoryType.swift */; };
+		3B3F6DDC288E5E7C00BB35FB /* SubscribeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F6DDB288E5E7C00BB35FB /* SubscribeManager.swift */; };
 		3B67A1A82889575000BDC5AA /* Authenticate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B67A1A72889575000BDC5AA /* Authenticate.storyboard */; };
 		3B67A1AB2889583E00BDC5AA /* AuthenTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B67A1AA2889583E00BDC5AA /* AuthenTextField.xib */; };
 		3B67A1AD2889596100BDC5AA /* AuthenTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A1AC2889596100BDC5AA /* AuthenTextField.swift */; };
@@ -116,6 +127,17 @@
 		3B3F6DBC288C23CC00BB35FB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		3B3F6DBE288C23DD00BB35FB /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		3B3F6DC0288C26FE00BB35FB /* SignupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupManager.swift; sourceTree = "<group>"; };
+		3B3F6DC3288E382A00BB35FB /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
+		3B3F6DC5288E384400BB35FB /* SubscribeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewModel.swift; sourceTree = "<group>"; };
+		3B3F6DC8288E3C7300BB35FB /* SubscribeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscribeTableViewCell.xib; sourceTree = "<group>"; };
+		3B3F6DCA288E3DCF00BB35FB /* SubscribeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeTableViewCell.swift; sourceTree = "<group>"; };
+		3B3F6DCC288E3DF600BB35FB /* SubscribeTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeTableViewViewModel.swift; sourceTree = "<group>"; };
+		3B3F6DCE288E411C00BB35FB /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		3B3F6DD1288E479D00BB35FB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		3B3F6DD4288E49E200BB35FB /* SubscribeServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeServiceType.swift; sourceTree = "<group>"; };
+		3B3F6DD7288E4A2500BB35FB /* SubscribeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeModel.swift; sourceTree = "<group>"; };
+		3B3F6DD9288E4B6200BB35FB /* SubscribeRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeRepositoryType.swift; sourceTree = "<group>"; };
+		3B3F6DDB288E5E7C00BB35FB /* SubscribeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeManager.swift; sourceTree = "<group>"; };
 		3B67A1A628894CEC00BDC5AA /* Poppins Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Medium 500.ttf"; sourceTree = "<group>"; };
 		3B67A1A72889575000BDC5AA /* Authenticate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authenticate.storyboard; sourceTree = "<group>"; };
 		3B67A1AA2889583E00BDC5AA /* AuthenTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenTextField.xib; sourceTree = "<group>"; };
@@ -235,6 +257,7 @@
 		3B082051288713E80073B8C5 /* Carol */ = {
 			isa = PBXGroup;
 			children = (
+				3B3F6DD0288E478F00BB35FB /* Constants */,
 				3B3F6DAC288AA68F00BB35FB /* Helpers */,
 				3B94C715288727920069461B /* Extensions */,
 				3B94C70F2887253E0069461B /* Repositories */,
@@ -302,6 +325,53 @@
 				3B3F6DC0288C26FE00BB35FB /* SignupManager.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		3B3F6DC2288E381800BB35FB /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F6DD6288E4A1700BB35FB /* Model */,
+				3B3F6DC7288E3C5D00BB35FB /* Cell */,
+				3B3F6DC3288E382A00BB35FB /* SubscribeViewController.swift */,
+				3B3F6DC5288E384400BB35FB /* SubscribeViewModel.swift */,
+				3B3F6DDB288E5E7C00BB35FB /* SubscribeManager.swift */,
+			);
+			path = Subscription;
+			sourceTree = "<group>";
+		};
+		3B3F6DC7288E3C5D00BB35FB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F6DC8288E3C7300BB35FB /* SubscribeTableViewCell.xib */,
+				3B3F6DCA288E3DCF00BB35FB /* SubscribeTableViewCell.swift */,
+				3B3F6DCC288E3DF600BB35FB /* SubscribeTableViewViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3B3F6DD0288E478F00BB35FB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F6DD1288E479D00BB35FB /* Constant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3B3F6DD3288E49C700BB35FB /* Subscribe */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F6DD4288E49E200BB35FB /* SubscribeServiceType.swift */,
+				3B3F6DD9288E4B6200BB35FB /* SubscribeRepositoryType.swift */,
+			);
+			path = Subscribe;
+			sourceTree = "<group>";
+		};
+		3B3F6DD6288E4A1700BB35FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B3F6DD7288E4A2500BB35FB /* SubscribeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3B67A1A92889579900BDC5AA /* DesignSystem */ = {
@@ -373,6 +443,7 @@
 		3B94C6D828871CDF0069461B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3B3F6DC2288E381800BB35FB /* Subscription */,
 				3B3F6DBB288C23BB00BB35FB /* SignUp */,
 				3B3F6DB2288BECDA00BB35FB /* ChangePassword */,
 				3B67A1B228897EC400BDC5AA /* Login */,
@@ -415,6 +486,7 @@
 		3B94C70F2887253E0069461B /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				3B3F6DD3288E49C700BB35FB /* Subscribe */,
 				3B3F6DB1288AB31600BB35FB /* Login */,
 				3B94C7102887254A0069461B /* Config */,
 			);
@@ -437,6 +509,7 @@
 				3B94C71A288733520069461B /* UIColor+Extention.swift */,
 				3B67A1B028895BF800BDC5AA /* String+Extension.swift */,
 				3B3F6DAA288A987200BB35FB /* UIViewController+Extension.swift */,
+				3B3F6DCE288E411C00BB35FB /* UITableViewCell+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -588,6 +661,7 @@
 				3B082062288713E90073B8C5 /* LaunchScreen.storyboard in Resources */,
 				3B67A1AB2889583E00BDC5AA /* AuthenTextField.xib in Resources */,
 				3B94C6D628871BAA0069461B /* Poppins SemiBold 600.ttf in Resources */,
+				3B3F6DC9288E3C7300BB35FB /* SubscribeTableViewCell.xib in Resources */,
 				3B08205F288713E90073B8C5 /* Assets.xcassets in Resources */,
 				3B94C6D528871BAA0069461B /* Poppins Regular 400.ttf in Resources */,
 				3B08205A288713E80073B8C5 /* Main.storyboard in Resources */,
@@ -704,9 +778,11 @@
 			files = (
 				3B67A1B128895BF800BDC5AA /* String+Extension.swift in Sources */,
 				3B67A1AD2889596100BDC5AA /* AuthenTextField.swift in Sources */,
+				3B3F6DD5288E49E200BB35FB /* SubscribeServiceType.swift in Sources */,
 				3B94C71928872EE70069461B /* OnboardingManager.swift in Sources */,
 				3B3F6DB6288BED3E00BB35FB /* ChangePasswordViewModel.swift in Sources */,
 				3B94C717288727A30069461B /* Observable+bind.swift in Sources */,
+				3B3F6DD2288E479D00BB35FB /* Constant.swift in Sources */,
 				3B94C7142887261A0069461B /* CRConfigRepository.swift in Sources */,
 				3B3F6DBF288C23DD00BB35FB /* SignupViewModel.swift in Sources */,
 				3B67A1BA2889834C00BDC5AA /* LoginManager.swift in Sources */,
@@ -714,21 +790,29 @@
 				3B082053288713E80073B8C5 /* AppDelegate.swift in Sources */,
 				3B3F6DB8288BF18900BB35FB /* ChangePasswordManager.swift in Sources */,
 				3B94C70E288724A50069461B /* OnboardingItem.swift in Sources */,
+				3B3F6DCD288E3DF600BB35FB /* SubscribeTableViewViewModel.swift in Sources */,
 				3B94C6DA28871D080069461B /* OnboardingViewController.swift in Sources */,
 				3B94C6E2288720F90069461B /* OnboardingContentViewController.swift in Sources */,
 				3B3F6DC1288C26FE00BB35FB /* SignupManager.swift in Sources */,
 				3B94C7122887257A0069461B /* CRConfigService.swift in Sources */,
 				3B3F6DB0288AA80A00BB35FB /* AuthenTextFieldState.swift in Sources */,
+				3B3F6DDA288E4B6200BB35FB /* SubscribeRepositoryType.swift in Sources */,
 				3B3F6DAB288A987200BB35FB /* UIViewController+Extension.swift in Sources */,
 				3B94C6E028871F2E0069461B /* OnboardingPageViewModel.swift in Sources */,
 				3B94C71B288733520069461B /* UIColor+Extention.swift in Sources */,
 				3B94C6DE28871E2A0069461B /* OnboardingPageViewController.swift in Sources */,
 				3B67A1B428897ED300BDC5AA /* LoginViewController.swift in Sources */,
+				3B3F6DCB288E3DCF00BB35FB /* SubscribeTableViewCell.swift in Sources */,
 				3B3F6DB4288BECEF00BB35FB /* ChangePasswordViewController.swift in Sources */,
 				3B3F6DBA288C037800BB35FB /* ChangePasswordSuccessViewController.swift in Sources */,
 				3B3F6DAE288AA69B00BB35FB /* ValidateHelper.swift in Sources */,
+				3B3F6DD8288E4A2500BB35FB /* SubscribeModel.swift in Sources */,
+				3B3F6DC4288E382A00BB35FB /* SubscribeViewController.swift in Sources */,
 				3B67A1AF288959DF00BDC5AA /* AuthenTextField+Types.swift in Sources */,
+				3B3F6DC6288E384500BB35FB /* SubscribeViewModel.swift in Sources */,
+				3B3F6DDC288E5E7C00BB35FB /* SubscribeManager.swift in Sources */,
 				3B082055288713E80073B8C5 /* SceneDelegate.swift in Sources */,
+				3B3F6DCF288E411C00BB35FB /* UITableViewCell+Extension.swift in Sources */,
 				3B6DB4EF288986F90024E6B6 /* MainNavigationController.swift in Sources */,
 				3B67A1B82889801400BDC5AA /* LoginViewModel.swift in Sources */,
 				3B3F6DBD288C23CC00BB35FB /* SignupViewController.swift in Sources */,

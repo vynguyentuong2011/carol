@@ -186,13 +186,26 @@ class SignupViewController: BaseViewController, SignupPresentable {
                 self.updateImage()
             }
             .disposed(by: disposeBag)
+        
+        presenting.showLoading
+            .asDriver()
+            .drive(onNext: { [weak self] show in
+                guard let self = self else { return }
+                if show {
+                    self.showLoadingView()
+                } else {
+                    self.dismissLoadingView()
+                }
+            }).disposed(by: disposeBag)
     }
     
     private func configureAction() {
         creatAccountBtn.rx.tap
             .subscribeNext { [weak self] _ in
                 guard let self = self else { return }
-                
+                if let subscribeViewController = SubscribeManager.shared.getSubscribeViewController() {
+                    self.navigationController?.pushViewController(subscribeViewController, animated: true)
+                }
             }
             .disposed(by: disposeBag)
         

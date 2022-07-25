@@ -23,6 +23,7 @@ def layout
   pod 'IQKeyboardManagerSwift'
   pod 'CHIPageControl', '~> 0.1.3'
   pod 'CHIPageControl/Aji'
+  pod 'MBProgressHUD'
 end
 
 def apiTools

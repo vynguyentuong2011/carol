@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import IQKeyboardManagerSwift
+import MBProgressHUD
 
 public class BaseViewController: UIViewController {
     
@@ -77,6 +78,28 @@ public class BaseViewController: UIViewController {
             textField.errorMessage = msg
             textField.borderColor = UIColor(rgb: 0xFF6905)
         }
+    }
+    
+    // MARK: - loading
+    
+    fileprivate var progressHub: MBProgressHUD?
+    
+    public func showLoadingView(_ containerView: UIView? = nil) {
+        if self.progressHub == nil {
+            self.progressHub = MBProgressHUD.showAdded(to: containerView ?? self.navigationController?.view ?? self.view, animated: true)
+        }
+    }
+    
+    public func dismissLoadingView() {
+        if let progressHub = self.progressHub {
+            progressHub.hide(animated: true)
+            self.progressHub = nil
+        }
+    }
+    
+    public func showSubmitErrorMessage(_ message: String?) {
+        let msg = message ?? Constants.Network.ErrorMessage.unexpected
+        self.show(message: msg, title: nil)
     }
 }
 

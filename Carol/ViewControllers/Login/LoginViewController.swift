@@ -97,6 +97,17 @@ class LoginViewController: BaseViewController, LoginPresentable {
     private func configurePresenter() {
         guard let viewModel = viewModel else { return }
         
+        presenting.showLoading
+            .asDriver()
+            .drive(onNext: { [weak self] show in
+                guard let self = self else { return }
+                if show {
+                    self.showLoadingView()
+                } else {
+                    self.dismissLoadingView()
+                }
+            }).disposed(by: disposeBag)
+        
         emailTextField.textDidChange = { text in
             if viewModel.currentText != text {
                 viewModel.updateText(text)
