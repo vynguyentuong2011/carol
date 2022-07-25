@@ -106,6 +106,7 @@ class ChangePasswordViewController: BaseViewController, ChangePasswordPresentabl
             .subscribeNext { [weak self] _ in
                 guard let self = self else { return }
                 let successViewController = ChangePasswordSuccessViewController.instantiate()
+                successViewController.desc = "Congratulations, you have completed change password!"
                 successViewController.modalPresentationStyle = .fullScreen
                 self.navigationController?.present(successViewController, animated: true)
             }

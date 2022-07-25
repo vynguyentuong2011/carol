@@ -11,6 +11,9 @@ import RxSwift
 class ChangePasswordSuccessViewController: BaseViewController {
     
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var descLabel: UILabel!
+    
+    var desc: String = ""
     
     static func instantiate() -> ChangePasswordSuccessViewController {
         UIStoryboard(
@@ -36,6 +39,7 @@ class ChangePasswordSuccessViewController: BaseViewController {
         loginButton.backgroundColor = UIColor(rgb: 0x3D5CFF)
         loginButton.layer.cornerRadius = 12
         loginButton.titleLabel?.attributedText = LoginViewController.loginAttributedTitle(title: "Log in")
+        self.descLabel.text = desc
     }
     
     private func configureAction() {

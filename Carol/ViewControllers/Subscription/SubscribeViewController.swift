@@ -148,6 +148,16 @@ class SubscribeViewController: BaseViewController, SubscribePresentable {
                 }
             }
             .disposed(by: disposeBag)
+        
+        payButton.rx.tap
+            .subscribeNext { [weak self] _ in
+                guard let self = self else { return }
+                let successViewController = ChangePasswordSuccessViewController.instantiate()
+                successViewController.desc = "Congratulations, you have completed subscribe!"
+                successViewController.modalPresentationStyle = .fullScreen
+                self.navigationController?.present(successViewController, animated: true)
+            }
+            .disposed(by: disposeBag)
     }
     
     private final func initTableView() {

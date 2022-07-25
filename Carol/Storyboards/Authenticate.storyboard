@@ -371,6 +371,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descLabel" destination="olo-3T-irG" id="j1w-CN-PCb"/>
                         <outlet property="loginButton" destination="uI2-RA-iqi" id="bLO-W3-06L"/>
                     </connections>
                 </viewController>

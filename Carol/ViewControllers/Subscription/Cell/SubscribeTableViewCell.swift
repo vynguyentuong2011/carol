@@ -34,10 +34,9 @@ class SubscribeTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0))
         parentView.layer.masksToBounds = true
         parentView.layer.cornerRadius = 5
-        parentView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        parentView.layer.shadowOffset = .zero
         parentView.layer.shadowColor = UIColor(rgb: 0xB8B8D2).cgColor
         parentView.layer.shadowOpacity = 1
         parentView.layer.shadowRadius = 5
