@@ -37,6 +37,8 @@ class SignupViewController: BaseViewController, SignupPresentable {
     
     var showLoading: BehaviorRelay<Bool> = .init(value: false)
     var submitServerErrorMessage: BehaviorRelay<String?> = .init(value: nil)
+    var submitSuccessMessage: BehaviorRelay<Void?> = .init(value: nil)
+    var didSubmitRegister: BehaviorRelay<(String, String)?> = .init(value: nil)
     var isSelected: BehaviorRelay<Bool?> = .init(value: false)
     var selectedValue: Bool = false
     var handler: ((Bool) -> Void)?
@@ -197,15 +199,26 @@ class SignupViewController: BaseViewController, SignupPresentable {
                     self.dismissLoadingView()
                 }
             }).disposed(by: disposeBag)
+        
+        presenting.submitSuccessMessage
+            .subscribeNext { [weak self] _ in
+                guard let self = self else { return }
+                if let subscribeViewController = SubscribeManager.shared.getSubscribeViewController() {
+                    self.navigationController?.pushViewController(subscribeViewController, animated: true)
+                }
+            }
+            .disposed(by: disposeBag)
     }
     
     private func configureAction() {
         creatAccountBtn.rx.tap
             .subscribeNext { [weak self] _ in
                 guard let self = self else { return }
-                if let subscribeViewController = SubscribeManager.shared.getSubscribeViewController() {
-                    self.navigationController?.pushViewController(subscribeViewController, animated: true)
+                guard let email = self.emailTextField.text,
+                      let password = self.passwordTextField.text else {
+                    return
                 }
+                self.presenting.didSubmitRegister.accept((email, password))
             }
             .disposed(by: disposeBag)
         

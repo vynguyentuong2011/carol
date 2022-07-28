@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxRelay
+import Action
 
 protocol SignupPresentableListener: AnyObject {
     func didBecomeActive()
@@ -16,7 +17,9 @@ protocol SignupPresentableListener: AnyObject {
 protocol SignupPresentable: AnyObject {
     var showLoading: BehaviorRelay<Bool> { get }
     var submitServerErrorMessage: BehaviorRelay<String?> { get }
+    var submitSuccessMessage: BehaviorRelay<Void?> { get }
     var isSelected: BehaviorRelay<Bool?> { get }
+    var didSubmitRegister: BehaviorRelay<(String, String)?> { get }
 }
 
 class SignupViewModel: SignupPresentableListener {
@@ -25,6 +28,7 @@ class SignupViewModel: SignupPresentableListener {
     weak var presenter: SignupPresentable?
     internal var listening: SignupPresentableListener { return self }
     private var disposeBag = DisposeBag()
+    
     private let emailTextRelay = BehaviorRelay<String?>(value: nil)
     private let passwordTextRelay = BehaviorRelay<String?>(value: nil)
     private let beginEditingRelay: PublishRelay<Void> = .init()
@@ -118,7 +122,34 @@ class SignupViewModel: SignupPresentableListener {
         presenter?.isSelected.accept(checked)
     }
     
+    var authenRepository: AuthenRepositoryType
+    init(authenRepository: AuthenRepositoryType = AuthenRepository()) {
+        self.authenRepository = authenRepository
+    }
+    
     func didBecomeActive() {
-        
+        configureActions()
+    }
+    
+    private func configureActions() {
+        guard let presenter = presenter else { return }
+        presenter.didSubmitRegister
+            .subscribeNext { [weak self] infoRegister in
+                guard let self = self, let infoRegister = infoRegister else { return }
+                self.makeRegisterAction(email: infoRegister.0, password: infoRegister.1, completionHandler: { result in
+                    switch result {
+                    case .success(_):
+                        self.presenter?.submitSuccessMessage.accept(())
+                    case .failure(let error):
+                        self.presenter?.submitServerErrorMessage.accept(error.localizedDescription)
+                    }
+                })
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    private func makeRegisterAction(email: String, password: String, completionHandler: SignUpCompletionHandler?) {
+        self.authenRepository.signup(email: email, password: password, completionHandler: completionHandler)
     }
 }
+
