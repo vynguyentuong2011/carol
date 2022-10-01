@@ -24,7 +24,6 @@ class OnboardingContentViewController: UIViewController {
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    
     internal var item: OnboardingItem?
     
     override func viewDidLoad() {
