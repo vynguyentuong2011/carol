@@ -119,11 +119,10 @@ class SubscribeViewController: BaseViewController, SubscribePresentable {
             }).disposed(by: disposeBag)
         
         presenting.submitServerErrorMessage
-            .asDriver()
-            .skip(1)
+            .asDriver(onErrorJustReturn: nil)
             .drive(onNext: { [weak self] errorMsg in
-                guard let self = self else { return }
-                self.showSubmitErrorMessage(errorMsg)
+                guard let self = self, let error = errorMsg else { return }
+                self.showSubmitErrorMessage(error)
             }).disposed(by: disposeBag)
     }
     

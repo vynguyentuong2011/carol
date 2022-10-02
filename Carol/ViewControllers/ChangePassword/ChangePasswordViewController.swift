@@ -51,6 +51,7 @@ class ChangePasswordViewController: BaseViewController, ChangePasswordPresentabl
         super.viewWillAppear(animated)
         configureIQKeyboard()
         setupBackButtonItem()
+        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     override func viewDidLayoutSubviews() {

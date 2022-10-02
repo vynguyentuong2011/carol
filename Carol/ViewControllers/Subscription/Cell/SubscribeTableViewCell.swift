@@ -93,7 +93,7 @@ extension SubscribeTableViewCell {
         let att = NSMutableAttributedString(
             string: title,
             attributes: [.foregroundColor: UIColor(rgb: 0x1F1F39),
-                        .font: UIFont.boldSystemFont(ofSize: 14)
+                         .font: UIFont(name: "Poppins-SemiBold", size: 14)
                         ]
         )
         return att
@@ -103,11 +103,11 @@ extension SubscribeTableViewCell {
         let attDesc = NSMutableAttributedString(
             string: descHead,
             attributes: [.foregroundColor: UIColor(rgb: 0x1F1F39),
-                         .font: UIFont.boldSystemFont(ofSize: 12)
+                         .font: UIFont(name: "Poppins-SemiBold", size: 12)
                          ]
         )
         let attDescBody = NSAttributedString(string: " - \(descBody)", attributes: [.foregroundColor: UIColor(rgb: 0x1F1F39),
-                                                                                    .font: UIFont.systemFont(ofSize: 12)
+                                                                                    .font: UIFont(name: "Poppins-Regular", size: 12)
                                                                                     ]
         )
         attDesc.append(attDescBody)

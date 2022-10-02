@@ -53,8 +53,8 @@
 		3B67A1B82889801400BDC5AA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A1B72889801400BDC5AA /* LoginViewModel.swift */; };
 		3B67A1BA2889834C00BDC5AA /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A1B92889834C00BDC5AA /* LoginManager.swift */; };
 		3B6DB4EF288986F90024E6B6 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6DB4EE288986F90024E6B6 /* MainNavigationController.swift */; };
-		3B94C6D528871BAA0069461B /* Poppins Regular 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B94C6D328871BAA0069461B /* Poppins Regular 400.ttf */; };
-		3B94C6D628871BAA0069461B /* Poppins SemiBold 600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B94C6D428871BAA0069461B /* Poppins SemiBold 600.ttf */; };
+		3B94C6D528871BAA0069461B /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B94C6D328871BAA0069461B /* Poppins-Regular.ttf */; };
+		3B94C6D628871BAA0069461B /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B94C6D428871BAA0069461B /* Poppins-SemiBold.ttf */; };
 		3B94C6DA28871D080069461B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94C6D928871D080069461B /* OnboardingViewController.swift */; };
 		3B94C6DE28871E2A0069461B /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94C6DD28871E2A0069461B /* OnboardingPageViewController.swift */; };
 		3B94C6E028871F2E0069461B /* OnboardingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94C6DF28871F2E0069461B /* OnboardingPageViewModel.swift */; };
@@ -149,7 +149,7 @@
 		3B3F6DE6288E86AB00BB35FB /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		3B3F6DE82892AF3300BB35FB /* AuthenServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenServiceType.swift; sourceTree = "<group>"; };
 		3B3F6DEA2892B54C00BB35FB /* AuthenRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenRepositoryType.swift; sourceTree = "<group>"; };
-		3B67A1A628894CEC00BDC5AA /* Poppins Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Medium 500.ttf"; sourceTree = "<group>"; };
+		3B67A1A628894CEC00BDC5AA /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		3B67A1A72889575000BDC5AA /* Authenticate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authenticate.storyboard; sourceTree = "<group>"; };
 		3B67A1AA2889583E00BDC5AA /* AuthenTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenTextField.xib; sourceTree = "<group>"; };
 		3B67A1AC2889596100BDC5AA /* AuthenTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenTextField.swift; sourceTree = "<group>"; };
@@ -160,8 +160,8 @@
 		3B67A1B72889801400BDC5AA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3B67A1B92889834C00BDC5AA /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		3B6DB4EE288986F90024E6B6 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
-		3B94C6D328871BAA0069461B /* Poppins Regular 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Regular 400.ttf"; sourceTree = "<group>"; };
-		3B94C6D428871BAA0069461B /* Poppins SemiBold 600.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins SemiBold 600.ttf"; sourceTree = "<group>"; };
+		3B94C6D328871BAA0069461B /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		3B94C6D428871BAA0069461B /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		3B94C6D928871D080069461B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		3B94C6DD28871E2A0069461B /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		3B94C6DF28871F2E0069461B /* OnboardingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewModel.swift; sourceTree = "<group>"; };
@@ -467,9 +467,9 @@
 		3B94C6D228871B7B0069461B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				3B94C6D328871BAA0069461B /* Poppins Regular 400.ttf */,
-				3B94C6D428871BAA0069461B /* Poppins SemiBold 600.ttf */,
-				3B67A1A628894CEC00BDC5AA /* Poppins Medium 500.ttf */,
+				3B94C6D328871BAA0069461B /* Poppins-Regular.ttf */,
+				3B94C6D428871BAA0069461B /* Poppins-SemiBold.ttf */,
+				3B67A1A628894CEC00BDC5AA /* Poppins-Medium.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -704,10 +704,10 @@
 				3B67A1A82889575000BDC5AA /* Authenticate.storyboard in Resources */,
 				3B082062288713E90073B8C5 /* LaunchScreen.storyboard in Resources */,
 				3B67A1AB2889583E00BDC5AA /* AuthenTextField.xib in Resources */,
-				3B94C6D628871BAA0069461B /* Poppins SemiBold 600.ttf in Resources */,
+				3B94C6D628871BAA0069461B /* Poppins-SemiBold.ttf in Resources */,
 				3B3F6DC9288E3C7300BB35FB /* SubscribeTableViewCell.xib in Resources */,
 				3B08205F288713E90073B8C5 /* Assets.xcassets in Resources */,
-				3B94C6D528871BAA0069461B /* Poppins Regular 400.ttf in Resources */,
+				3B94C6D528871BAA0069461B /* Poppins-Regular.ttf in Resources */,
 				3B08205A288713E80073B8C5 /* Main.storyboard in Resources */,
 				3B94C6E4288721C80069461B /* GoogleService-Info.plist in Resources */,
 			);

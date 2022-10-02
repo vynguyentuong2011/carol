@@ -59,7 +59,6 @@ class LoginViewController: BaseViewController, LoginPresentable {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setupUI()
-        
     }
     
     private func setupUI() {
@@ -81,16 +80,6 @@ class LoginViewController: BaseViewController, LoginPresentable {
         loginButton.backgroundColor = UIColor(rgb: 0x3D5CFF)
         loginButton.layer.cornerRadius = 12
         loginButton.titleLabel?.attributedText = LoginViewController.loginAttributedTitle(title: "Log In")
-        
-        alreadyHaveAccountLabel.attributedText = LoginViewController.alreadyAttributedTitle(title: "Don’t have an account?")
-        alreadyHaveAccountLabel.rx.tapGesture()
-            .when(.recognized)
-            .mapToVoid()
-            .subscribeNext { [weak self] _ in
-                guard let self = self else { return }
-                SignupManager.shared.presentSignUpViewController(viewController: self, completion: nil)
-            }
-            .disposed(by: disposeBag)
         
     }
     
@@ -148,6 +137,16 @@ class LoginViewController: BaseViewController, LoginPresentable {
                 }
             }
             .disposed(by: disposeBag)
+        
+        alreadyHaveAccountLabel.attributedText = LoginViewController.alreadyAttributedTitle(title: "Don’t have an account?")
+        alreadyHaveAccountLabel.rx.tapGesture()
+            .when(.recognized)
+            .mapToVoid()
+            .subscribeNext { [weak self] _ in
+                guard let self = self else { return }
+                SignupManager.shared.presentSignUpViewController(viewController: self, completion: nil)
+            }
+            .disposed(by: disposeBag)
     }
     
     override func handleState(_ state: AuthenTextFieldState, _ textField: AuthenTextField) {
@@ -174,7 +173,6 @@ extension LoginViewController {
             att.append(symbol)
         }
         return att
-        return att
     }
     
     public static func forgetPWAttributedTitle(title: String) -> NSAttributedString? {
@@ -182,7 +180,7 @@ extension LoginViewController {
             string: title,
             attributes: [
                 .foregroundColor: UIColor(rgb: 0x5555CB),
-                .font: UIFont.systemFont(ofSize: 14)
+                .font: UIFont(name: "Poppins-Regular", size: 14)
             ]
         )
         return att
@@ -193,7 +191,7 @@ extension LoginViewController {
             string: title,
             attributes: [
                 .foregroundColor: UIColor.white,
-                .font: UIFont.systemFont(ofSize: 16)
+                .font: UIFont(name: "Poppins-Regular", size: 16)
             ]
         )
         return att

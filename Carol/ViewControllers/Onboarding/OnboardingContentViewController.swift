@@ -90,7 +90,7 @@ class OnboardingContentViewController: UIViewController {
         let att = NSMutableAttributedString.init()
         att.append(NSAttributedString.init(string: "Sign up", attributes: [
             .foregroundColor: UIColor.white,
-            .font: UIFont.systemFont(ofSize: 16)
+            .font: UIFont(name: "Poppins-Regular", size: 16)
         ]))
         return att
     }
@@ -99,7 +99,7 @@ class OnboardingContentViewController: UIViewController {
         let att = NSMutableAttributedString.init()
         att.append(NSAttributedString.init(string: "Log in", attributes: [
             .foregroundColor: UIColor(rgb: 0x3D5CFF),
-            .font: UIFont.systemFont(ofSize: 16)
+            .font: UIFont(name: "Poppins-Regular", size: 16)
         ]))
         return att
     }

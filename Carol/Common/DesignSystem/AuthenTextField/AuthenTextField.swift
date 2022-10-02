@@ -134,14 +134,14 @@ public final class AuthenTextField: UIView {
     /// The title font applied when text is empty and contol is not responder.
     ///
     /// Default value is UIFont.systemFont(ofSize: 14)
-    public var titleFont: UIFont = .systemFont(ofSize: 14) {
+    public var titleFont: UIFont = UIFont(name: "Poppins-SemiBold", size: 14)! {
         didSet { updateTitleFont() }
     }
     
     /// The title font applied when text is not empty or contol is responder.
     ///
     /// Default value is UIFont.systemFont(ofSize: 10)
-    public var activeTitleFont: UIFont = .boldSystemFont(ofSize: 14) {
+    public var activeTitleFont: UIFont = UIFont(name: "Poppins-SemiBold", size: 14)! {
         didSet { updateTitleFont() }
     }
     
@@ -306,7 +306,7 @@ public final class AuthenTextField: UIView {
     /// The placeholder font in compnent
     ///
     /// Default value is UIFont.systemFont(ofSize: 13)
-    public var placeholderFont: UIFont = .systemFont(ofSize: 13) {
+    public var placeholderFont: UIFont = UIFont(name: "Poppins-Regular", size: 13)! {
         didSet { updatePlaceholderText() }
     }
     

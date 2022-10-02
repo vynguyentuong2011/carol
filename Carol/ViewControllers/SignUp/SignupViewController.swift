@@ -64,11 +64,11 @@ class SignupViewController: BaseViewController, SignupPresentable {
         super.viewWillAppear(animated)
         configureIQKeyboard()
         setupDismissButtonItem()
+        setupUI()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        setupUI()
 
     }
     
@@ -201,6 +201,7 @@ class SignupViewController: BaseViewController, SignupPresentable {
             }).disposed(by: disposeBag)
         
         presenting.submitSuccessMessage
+            .filter({ $0 != nil })
             .subscribeNext { [weak self] _ in
                 guard let self = self else { return }
                 if let subscribeViewController = SubscribeManager.shared.getSubscribeViewController() {
@@ -208,6 +209,13 @@ class SignupViewController: BaseViewController, SignupPresentable {
                 }
             }
             .disposed(by: disposeBag)
+        
+        presenting.submitServerErrorMessage
+            .asDriver(onErrorJustReturn: nil)
+            .drive(onNext: { [weak self] errorMsg in
+                guard let self = self, let error = errorMsg else { return }
+                self.showSubmitErrorMessage(error)
+            }).disposed(by: disposeBag)
     }
     
     private func configureAction() {

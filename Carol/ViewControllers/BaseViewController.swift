@@ -24,7 +24,6 @@ public class BaseViewController: UIViewController {
     func setupBackButtonItem() {
         let backButtonItem = UIBarButtonItem(image: UIImage(named: "left"), style: .plain, target: self, action: #selector(backButtonHandle))
         backButtonItem.title = ""
-        self.navigationItem.leftBarButtonItem = backButtonItem
     }
     
     @objc func backButtonHandle() {

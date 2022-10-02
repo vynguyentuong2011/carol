@@ -8,13 +8,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Poppins Medium 500.ttf">
+        <array key="Poppins-Medium.ttf">
             <string>Poppins-Medium</string>
         </array>
-        <array key="Poppins Regular 400.ttf">
+        <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
-        <array key="Poppins SemiBold 600.ttf">
+        <array key="Poppins-SemiBold.ttf">
             <string>Poppins-SemiBold</string>
         </array>
     </customFonts>
@@ -103,13 +103,12 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djo-YN-58o">
-                                <rect key="frame" x="240.5" y="483" width="140" height="20"/>
+                                <rect key="frame" x="241.5" y="483" width="139" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="62r-Bn-3QV"/>
                                     <constraint firstAttribute="height" constant="20" id="iOD-uS-7DF"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Forget password?"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forget password?" titleAlignment="leading"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0H-SS-lpu">
                                 <rect key="frame" x="24" y="523" width="366" height="50"/>
@@ -394,13 +393,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EN4-Cj-WDv">
-                                <rect key="frame" x="0.0" y="169" width="414" height="747"/>
+                                <rect key="frame" x="0.0" y="209" width="414" height="707"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKk-mJ-vw7">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="710"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pUD-il-n7f">
-                                                <rect key="frame" x="43.5" y="30" width="327" height="494"/>
+                                                <rect key="frame" x="43.5" y="20" width="327" height="494"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Law-c9-2y2">
                                                         <rect key="frame" x="0.0" y="0.0" width="327" height="32"/>
@@ -561,7 +560,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjl-nN-jh7">
-                                                <rect key="frame" x="24" y="556" width="366" height="50"/>
+                                                <rect key="frame" x="24" y="546" width="366" height="50"/>
                                                 <color key="backgroundColor" red="0.23921568630000001" green="0.36078431370000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="ISa-Ik-fXq"/>
@@ -571,7 +570,7 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Create account"/>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZL-ZF-hsy">
-                                                <rect key="frame" x="24" y="622" width="366" height="36"/>
+                                                <rect key="frame" x="24" y="612" width="366" height="36"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XaG-ob-ol8">
                                                         <rect key="frame" x="0.0" y="0.0" width="16" height="36"/>
@@ -619,7 +618,7 @@ with our them &amp; condication.</string>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1y-KN-ynN">
-                                                <rect key="frame" x="24" y="682" width="198" height="17"/>
+                                                <rect key="frame" x="24" y="672" width="198" height="17"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? Log in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLP-Cq-MWm">
                                                         <rect key="frame" x="0.0" y="0.0" width="198" height="17"/>
@@ -640,7 +639,7 @@ with our them &amp; condication.</string>
                                             <constraint firstItem="x1y-KN-ynN" firstAttribute="leading" secondItem="NZL-ZF-hsy" secondAttribute="leading" id="6VG-DD-4wA"/>
                                             <constraint firstItem="x1y-KN-ynN" firstAttribute="top" secondItem="NZL-ZF-hsy" secondAttribute="bottom" constant="24" id="85G-jr-EYC"/>
                                             <constraint firstItem="fjl-nN-jh7" firstAttribute="leading" secondItem="EKk-mJ-vw7" secondAttribute="leading" constant="24" id="AqY-he-KhQ"/>
-                                            <constraint firstItem="pUD-il-n7f" firstAttribute="top" secondItem="EKk-mJ-vw7" secondAttribute="top" constant="30" id="Ecs-Ye-Mhv"/>
+                                            <constraint firstItem="pUD-il-n7f" firstAttribute="top" secondItem="EKk-mJ-vw7" secondAttribute="top" constant="20" id="Ecs-Ye-Mhv"/>
                                             <constraint firstItem="fjl-nN-jh7" firstAttribute="top" secondItem="pUD-il-n7f" secondAttribute="bottom" constant="32" id="SC6-Mg-ct0"/>
                                             <constraint firstItem="NZL-ZF-hsy" firstAttribute="leading" secondItem="fjl-nN-jh7" secondAttribute="leading" id="a49-FC-cYc"/>
                                             <constraint firstAttribute="height" constant="710" id="i2d-ov-qUN"/>
@@ -667,7 +666,7 @@ with our them &amp; condication.</string>
                             <constraint firstItem="VAs-Er-ZTx" firstAttribute="leading" secondItem="7Kz-fR-svP" secondAttribute="leading" constant="24" id="OH8-6O-PVs"/>
                             <constraint firstItem="7Kz-fR-svP" firstAttribute="trailing" secondItem="EN4-Cj-WDv" secondAttribute="trailing" id="YZK-le-FMH"/>
                             <constraint firstItem="7Kz-fR-svP" firstAttribute="bottom" secondItem="EN4-Cj-WDv" secondAttribute="bottom" id="aZs-c5-RvL"/>
-                            <constraint firstItem="EN4-Cj-WDv" firstAttribute="top" secondItem="VAs-Er-ZTx" secondAttribute="bottom" id="ccc-T8-1vj"/>
+                            <constraint firstItem="EN4-Cj-WDv" firstAttribute="top" secondItem="VAs-Er-ZTx" secondAttribute="bottom" constant="40" id="ccc-T8-1vj"/>
                             <constraint firstItem="VAs-Er-ZTx" firstAttribute="top" secondItem="7Kz-fR-svP" secondAttribute="top" constant="80" id="zKn-G0-c0P"/>
                         </constraints>
                     </view>
@@ -762,6 +761,7 @@ with our them &amp; condication.</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dmh-DH-t92">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
